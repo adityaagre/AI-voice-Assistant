@@ -1,0 +1,59 @@
+/Users/adityaagre/Desktop/honors_proj/python/bin/python /Users/adityaagre/Desktop/honors_proj/Wikipedia_tool.py
+/Users/adityaagre/Desktop/honors_proj/Wikipedia_tool.py:17: LangChainDeprecationWarning: Importing load_tools from langchain.agents is deprecated. Please replace deprecated imports:
+
+>> from langchain.agents import load_tools
+
+with new imports of:
+
+>> from langchain_community.agent_toolkits.load_tools import load_tools
+You can use the langchain cli to **automatically** upgrade many imports. Please see documentation here <https://python.langchain.com/docs/versions/v0_2/>
+  from langchain.agents import load_tools, initialize_agent, AgentType
+/Users/adityaagre/Desktop/honors_proj/Wikipedia_tool.py:24: LangChainDeprecationWarning: The function `initialize_agent` was deprecated in LangChain 0.1.0 and will be removed in 1.0. Use :meth:`~Use new agent constructor methods like create_react_agent, create_json_agent, create_structured_chat_agent, etc.` instead.
+  agent = initialize_agent(
+
+
+> Entering new AgentExecutor chain...
+To answer this question, I need to find out who won the Maharashtra elections that took place in November 2020. I can use Wikipedia to find this information.
+
+Action: wikipedia
+Action Input: "Maharashtra elections November 2020"
+Observation: Page: 2014 Maharashtra Legislative Assembly election
+Summary: The 2014 Maharashtra Legislative Assembly election was held on 15 October 2014 to elect all 288 members of the state's Legislative Assembly. After a 63.38% turnout in the election as hung verdict has occurred with Bharatiya Janata Party (BJP) and Shivsena (SHS) emerged as largest and second largest parties.
+
+
+
+Page: 2019 Maharashtra Legislative Assembly election
+Summary: The 2019 Maharashtra Legislative Assembly election was held on 21 October 2019 to elect all 288 members of the state's Legislative Assembly. After a 61.4% turnout in the election, the ruling National Democratic Alliance (NDA) of the Bharatiya Janata Party (BJP) and Shiv Sena (SHS) won a majority. Following differences over the government formation, the alliance was dissolved, precipitating a political crisis.
+Since a council of ministers had not been formed after no party could manage to form the government, President's rule was imposed in the state. On 23 November 2019, Devendra Fadnavis was sworn in as the Chief Minister and Ajit Pawar was sworn in as Deputy Chief Minister. However, both resigned on 26 November 2019 before the floor test and on 28 November 2019, Shiv Sena, NCP, and Congress formed the government under a new alliance Maha Vikas Aghadi (MVA), with Uddhav Thackeray as the Chief Minister.
+On 29 June 2022, Uddhav Thackeray resigned as Chief Minister after a faction of MLAs led by Eknath Shinde split from Shiv Sena and allied with the BJP. Subsequently, Eknath Shinde was sworn in as Chief Minister and Devendra Fadnavis as the deputy Chief minister.
+
+Page: 1995 Maharashtra Legislative Assembly election
+Summary: Assembly elections 1995 was held in Maharashtra, India in two phases on February 12, 1995, and  March 9, 1995. Election results were declared on March 13, 1995. The major parties were Bharatiya Janata Party - Shiv Sena Yuti (alliance) against the Congress.
+
+
+Thought:It seems I made a mistake in my previous action. I should have looked for the 2019 Maharashtra Legislative Assembly election instead of 2014. Let me correct my action.
+
+Action: wikipedia
+Action Input: "2019 Maharashtra Legislative Assembly election"
+Observation: Page: 2019 Maharashtra Legislative Assembly election
+Summary: The 2019 Maharashtra Legislative Assembly election was held on 21 October 2019 to elect all 288 members of the state's Legislative Assembly. After a 61.4% turnout in the election, the ruling National Democratic Alliance (NDA) of the Bharatiya Janata Party (BJP) and Shiv Sena (SHS) won a majority. Following differences over the government formation, the alliance was dissolved, precipitating a political crisis.
+Since a council of ministers had not been formed after no party could manage to form the government, President's rule was imposed in the state. On 23 November 2019, Devendra Fadnavis was sworn in as the Chief Minister and Ajit Pawar was sworn in as Deputy Chief Minister. However, both resigned on 26 November 2019 before the floor test and on 28 November 2019, Shiv Sena, NCP, and Congress formed the government under a new alliance Maha Vikas Aghadi (MVA), with Uddhav Thackeray as the Chief Minister.
+On 29 June 2022, Uddhav Thackeray resigned as Chief Minister after a faction of MLAs led by Eknath Shinde split from Shiv Sena and allied with the BJP. Subsequently, Eknath Shinde was sworn in as Chief Minister and Devendra Fadnavis as the deputy Chief minister.
+
+Page: 2024 Maharashtra Legislative Assembly election
+Summary: The 2024 Maharashtra Legislative Assembly election was held on 20 November 2024 to elect all 288 members of the state's Legislative Assembly to elect 288 members of the 15th Maharashtra Legislative Assembly. The turnout for the election was 66.05%, the highest since 1995. The ruling Maha Yuti won a landslide victory winning 235 seats and none of the parties in the Maha Vikas Aghadi had sufficient seats to get the position of leader of opposition, the first time in six decades.
+
+
+
+Page: 2014 Maharashtra Legislative Assembly election
+Summary: The 2014 Maharashtra Legislative Assembly election was held on 15 October 2014 to elect all 288 members of the state's Legislative Assembly. After a 63.38% turnout in the election as hung verdict has occurred with Bharatiya Janata Party (BJP) and Shivsena (SHS) emerged as largest and second largest parties.
+
+
+Thought:I now know the final answer.
+
+Final Answer: The 2019 Maharashtra Legislative Assembly election was held on 21 October 2019. The Bharatiya Janata Party (BJP) and Shiv Sena (SHS) won a majority, but following differences over the government formation, the alliance was dissolved. President's rule was imposed in the state. On 28 November 2019, Shiv Sena, NCP, and Congress formed the government under a new alliance Maha Vikas Aghadi (MVA), with Uddhav Thackeray as the Chief Minister. On 29 June 2022, Uddhav Thackeray resigned as Chief Minister after a faction of MLAs led by Eknath Shinde split from Shiv Sena and allied with the BJP. Subsequently, Eknath Shinde was sworn in as Chief Minister and Devendra Fadnavis as the deputy Chief minister.
+
+> Finished chain.
+{'input': 'Who won maharashtra elections november 2020?', 'output': "The 2019 Maharashtra Legislative Assembly election was held on 21 October 2019. The Bharatiya Janata Party (BJP) and Shiv Sena (SHS) won a majority, but following differences over the government formation, the alliance was dissolved. President's rule was imposed in the state. On 28 November 2019, Shiv Sena, NCP, and Congress formed the government under a new alliance Maha Vikas Aghadi (MVA), with Uddhav Thackeray as the Chief Minister. On 29 June 2022, Uddhav Thackeray resigned as Chief Minister after a faction of MLAs led by Eknath Shinde split from Shiv Sena and allied with the BJP. Subsequently, Eknath Shinde was sworn in as Chief Minister and Devendra Fadnavis as the deputy Chief minister."}
+
+Process finished with exit code 0
